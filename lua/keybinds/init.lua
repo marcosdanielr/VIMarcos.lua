@@ -1,5 +1,6 @@
-require 'keybinds.nvim-tree'
-require 'keybinds.toggleterm'
+require "keybinds.nvim-tree"
+require "keybinds.toggleterm"
+require "keybinds.telescope"
 
 -- shortcuts
 set_key("n", ";", ":", { noremap = true })
@@ -22,12 +23,6 @@ set_key("n", "<C-t>", ":tabnew<CR>", ns)
 set_key("n", "<C-s>", ":w<CR>", ns)
 set_key("n", "<C-q>", ":q<CR>", ns)
 set_key("n", "<S-q>", ":q!<CR>", ns)
-
--- telescope
-set_key("n", "<C-F>", ":lua require('telescope.builtin').live_grep({grep_open_files=true}) <CR>", ns)
-set_key("n", "<C-A>", ":Telescope live_grep<CR>", ns)
-set_key("n", "<C-P>", ":Telescope find_files<CR>", ns)
-
 
 -- edit
 set_key("n", "<space>`", 'viw<ESC>a"<esc>bi"<esc>ela', ns)

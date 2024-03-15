@@ -7,7 +7,11 @@ local plugins = {
     { "navarasu/onedark.nvim" },
     { "roobert/tailwindcss-colorizer-cmp.nvim" },
     { "norcalli/nvim-colorizer.lua" },
-    { "akinsho/toggleterm.nvim",                version = "*", config = true },
+    {
+        "akinsho/toggleterm.nvim",
+        version = "*",
+        config = true
+    },
     {
         "nvim-tree/nvim-tree.lua",
         version = "*",
@@ -18,6 +22,11 @@ local plugins = {
         config = function()
             require("nvim-tree").setup {}
         end
+    },
+    {
+        "nvim-telescope/telescope.nvim",
+        tag = "0.1.6",
+        dependencies = { "nvim-lua/plenary.nvim" }
     }
 }
 
