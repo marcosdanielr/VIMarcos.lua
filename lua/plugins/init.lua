@@ -27,7 +27,15 @@ local plugins = {
         "nvim-telescope/telescope.nvim",
         tag = "0.1.6",
         dependencies = { "nvim-lua/plenary.nvim" }
-    }
+    },
+    {
+        "numToStr/Comment.nvim",
+        config = function()
+            require("core.comment").setup()
+        end,
+        keys = { { "gc", mode = { "n", "v" } }, { "gb", mode = { "n", "v" } } },
+        event = "User FileOpened"
+    },
 }
 
 return plugins

@@ -1,8 +1,9 @@
 {
+  "Comment.nvim": { "branch": "master", "commit": "0236521ea582747b58869cb72f70ccfa967d2e89" },
   "gruvbox.nvim": { "branch": "main", "commit": "6e4027ae957cddf7b193adfaec4a8f9e03b4555f" },
   "lazy.nvim": { "branch": "main", "commit": "83493db50a434a4c5c648faf41e2ead80f96e478" },
   "nvim-colorizer.lua": { "branch": "master", "commit": "36c610a9717cc9ec426a07c8e6bf3b3abcb139d6" },
-  "nvim-tree.lua": { "branch": "master", "commit": "164f11db4f18a3e0eb3d6719b53f63cabfac7d8b" },
+  "nvim-tree.lua": { "branch": "master", "commit": "707b24af91a1d05823099ed8c5450796290466ba" },
   "nvim-web-devicons": { "branch": "master", "commit": "a851380fbea4c1312d11f13d5cdc86a7a19808dd" },
   "onedark.nvim": { "branch": "master", "commit": "1230aaf2a427b2c5b73aba6e4a9a5881d3e69429" },
   "plenary.nvim": { "branch": "master", "commit": "f7adfc4b3f4f91aab6caebf42b3682945fbc35be" },
