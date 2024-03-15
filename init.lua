@@ -11,3 +11,4 @@ require 'core.vim'
 require "constants.vim"
 require "core.lazy"
 require "keybinds"
+require "ui.theme"
