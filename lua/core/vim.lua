@@ -13,10 +13,6 @@ opt.history = 100
 opt.lazyredraw = true
 opt.synmaxcol = 240
 
--- theme
-opt.termguicolors = true
-cmd [[ colorscheme gruvbox ]]
-
 -- editor
 opt.number = true
 opt.wrap = false
