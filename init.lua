@@ -8,7 +8,7 @@
 -- require('lualine').setup()
 -- require 'plugins-configs.comment'
 require 'core.vim'
-require "constants.vim"
+require "constants.globals"
 require "core.lazy"
 require "keybinds"
 require "ui.theme"
