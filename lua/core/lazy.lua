@@ -18,3 +18,8 @@ require("search-and-replace").setup()
 require("colorizer").setup()
 require("Comment").setup()
 require("bufferline").setup()
+require("lualine").setup {
+    options = {
+        theme = "gruvbox"
+    },
+}
