@@ -1,6 +1,6 @@
-require 'keybinds.nvim-tree'
-
 vim.g.mapleader = ' '
+
+require 'keybinds.nvim-tree'
 
 -- shortcuts
 set_key("n", ";", ":", { noremap = true })

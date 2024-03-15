@@ -1,1 +1,1 @@
-set_key("n", "<Leader>e", ":NvimTreeToggle", ns)
+set_key("n", "<Leader>e", ":NvimTreeToggle<CR>", ns)
