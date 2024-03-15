@@ -16,6 +16,11 @@ set_key("n", "<A-l", ":vertical resize +2<CR>", ns)
 set_key("n", "<Leader>h", ":split<CR>", ns)
 set_key("n", "<Leader>v", ":vsplit<CR>", ns)
 
+set_key("n", "<C-h>", "<C-w>h", ns)
+set_key("n", "<C-j>", "<C-w>j", ns)
+set_key("n", "<C-k>", "<C-w>k", ns)
+set_key("n", "<C-l>", "<C-w>l", ns)
+
 -- buffers
 set_key("n", "<S-l>", ":BufferLineCycleNext<CR>", ns)
 set_key("n", "<S-h>", ":BufferLineCyclePrev<CR>", ns)
