@@ -7,6 +7,7 @@ local plugins = {
     { "navarasu/onedark.nvim" },
     { "roobert/tailwindcss-colorizer-cmp.nvim" },
     { "norcalli/nvim-colorizer.lua" },
+    { "akinsho/toggleterm.nvim",                version = "*", config = true },
     {
         "nvim-tree/nvim-tree.lua",
         version = "*",
