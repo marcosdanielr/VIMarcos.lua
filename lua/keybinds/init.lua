@@ -1,6 +1,7 @@
 require "keybinds.nvim-tree"
 require "keybinds.toggleterm"
 require "keybinds.telescope"
+require "keybinds.bufferline"
 
 -- shortcuts
 set_key("n", ";", ":", { noremap = true })
@@ -22,12 +23,11 @@ set_key("n", "<C-k>", "<C-w>k", ns)
 set_key("n", "<C-l>", "<C-w>l", ns)
 
 -- buffers
-set_key("n", "<S-l>", ":BufferLineCycleNext<CR>", ns)
-set_key("n", "<S-h>", ":BufferLineCyclePrev<CR>", ns)
 set_key("n", "<C-t>", ":tabnew<CR>", ns)
 set_key("n", "<C-s>", ":w<CR>", ns)
 set_key("n", "<C-q>", ":q<CR>", ns)
 set_key("n", "<S-q>", ":q!<CR>", ns)
+set_key("n", "<Leader>c", ":bd<CR>", ns)
 
 -- edit
 set_key("n", "<space>`", 'viw<ESC>a"<esc>bi"<esc>ela', ns)

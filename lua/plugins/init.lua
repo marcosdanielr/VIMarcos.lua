@@ -32,6 +32,11 @@ local plugins = {
         "numToStr/Comment.nvim",
         lazy = false,
     },
+    {
+        "akinsho/bufferline.nvim",
+        version = "*",
+        dependencies = "nvim-tree/nvim-web-devicons"
+    }
 }
 
 return plugins
