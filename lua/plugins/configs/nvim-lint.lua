@@ -3,7 +3,7 @@ local config = function()
 
     lint.linters_by_ft = {
         -- javascript = { "prettier" },
-        typescript = { "prettier" },
+        typescript = { "eslint_d" },
         javascriptreact = { "eslint_d" },
         typescriptreact = { "eslint_d" },
         svelte = { "eslint_d" },

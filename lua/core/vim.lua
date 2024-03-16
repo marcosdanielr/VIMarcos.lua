@@ -23,7 +23,7 @@ opt.foldmethod = 'marker'
 opt.splitright = true
 opt.splitbelow = true
 opt.conceallevel = 0
-opt.colorcolumn = '80'
+-- opt.colorcolumn = '80'
 --opt.cursorline = true
 opt.clipboard = "unnamedplus"
 opt.relativenumber = true
@@ -42,16 +42,16 @@ opt.shortmess:append { c = true }
 --}
 
 -- terminal
-cmd [[command! Term :botright split term://$SHELL]]
-cmd [[
-  autocmd TermOpen * setlocal listchars= nonumber norelativenumber nocursorline
-  autocmd BufLeave term://* stopinsert
-]]
-
--- others
-cmd [[
-  autocmd FileType css setl iskeyword+=-
-  autocmd FileType scss setl iskeyword+=-@-@
-
-  autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions -=o
-]]
+-- cmd [[command! Term :botright split term://$SHELL]]
+-- cmd [[
+--   autocmd TermOpen * setlocal listchars= nonumber norelativenumber nocursorline
+--   autocmd BufLeave term://* stopinsert
+-- ]]
+--
+-- -- others
+-- cmd [[
+--   autocmd FileType css setl iskeyword+=-
+--   autocmd FileType scss setl iskeyword+=-@-@
+--
+--   autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions -=o
+-- ]]
