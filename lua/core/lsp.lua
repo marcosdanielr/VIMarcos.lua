@@ -14,9 +14,19 @@ local on_attach = function(client, bufnr)
   end
 end
 
--- TypeScript
+
+if format_on_save then
+     vim.api.nvim_create_autocmd("BufWritePre", {
+        buffer = buffer,
+        callback = function()
+            vim.lsp.buf.format { async = false }
+        end
+    })
+  end
+
+
 nvim_lsp.tsserver.setup {
-  on_attach = on_attach,
+  -- on_attach = on_attach,
   filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
   cmd = { "typescript-language-server", "--stdio" }
 }
