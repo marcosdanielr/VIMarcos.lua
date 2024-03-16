@@ -7,8 +7,9 @@
 -- require("lspconfig").sumneko_lua.setup{}
 -- require('lualine').setup()
 -- require 'plugins-configs.comment'
-require 'core.vim'
+require "core.vim"
 require "constants.globals"
 require "core.lazy"
 require "keybinds"
 require "ui.theme"
+require "core.lsp"

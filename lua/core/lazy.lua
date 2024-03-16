@@ -20,6 +20,11 @@ require("Comment").setup()
 require("bufferline").setup()
 require("lualine").setup {
     options = {
-        theme = "gruvbox"
+        theme = "nighfly"
     },
+}
+require("mason").setup()
+require("mason-lspconfig").setup {
+    ensure_installed = { "lua_ls", "rust_analyzer" },
+    automatic_installation = true,
 }
