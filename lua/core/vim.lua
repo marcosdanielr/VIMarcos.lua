@@ -23,8 +23,6 @@ opt.foldmethod = 'marker'
 opt.splitright = true
 opt.splitbelow = true
 opt.conceallevel = 0
--- opt.colorcolumn = '80'
---opt.cursorline = true
 opt.clipboard = "unnamedplus"
 opt.relativenumber = true
 opt.scrolloff = 10
@@ -34,24 +32,3 @@ opt.tabstop = 2
 opt.smartindent = true
 opt.list = true
 opt.shortmess:append { c = true }
---opt.wichwrap:append {
---	['<'] = true,
---	['>'] = true,
---	[','] = true, h = true,
---	l = true
---}
-
--- terminal
--- cmd [[command! Term :botright split term://$SHELL]]
--- cmd [[
---   autocmd TermOpen * setlocal listchars= nonumber norelativenumber nocursorline
---   autocmd BufLeave term://* stopinsert
--- ]]
---
--- -- others
--- cmd [[
---   autocmd FileType css setl iskeyword+=-
---   autocmd FileType scss setl iskeyword+=-@-@
---
---   autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions -=o
--- ]]
