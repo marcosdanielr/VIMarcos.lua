@@ -2,10 +2,10 @@ local config = function()
 	local lint = require("lint")
 
 	lint.linters_by_ft = {
-		go = { "golangcilint" },
-		-- javascript = { "prettier" },
+		-- go = { "golangcilint" },
+		-- javascript = { "codespell" },
+		-- javascriptreact = { "eslint_d" },
 		typescript = { "eslint_d" },
-		javascriptreact = { "eslint_d" },
 		typescriptreact = { "eslint_d" },
 		svelte = { "eslint_d" },
 		kotlin = { "ktlint" },

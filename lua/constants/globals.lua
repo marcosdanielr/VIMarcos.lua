@@ -3,5 +3,3 @@ _G.ns = { noremap = true, silent = true }
 
 ---@type boolean
 _G.format_on_save = true
-
-_G.nvim_lsp = pcall(require, "lspconfig")

@@ -4,12 +4,13 @@ local config = function()
 	conform.setup({
 		formatters_by_ft = {
 			lua = { "stylua" },
+			python = { "isort", "black" },
 			go = { "goimports", "gofmt" },
 			svelte = { { "prettierd", "prettier" } },
 			javascript = { { "prettierd", "prettier" } },
-			typescript = { { "prettierd", "prettier" } },
+			typescript = { { "eslint_d", "eslint" } },
 			javascriptreact = { { "prettierd", "prettier" } },
-			typescriptreact = { { "prettierd", "prettier" } },
+			typescriptreact = { { "eslint_d", "eslint" } },
 			json = { { "prettierd", "prettier" } },
 			graphql = { { "prettierd", "prettier" } },
 			java = { "google-java-format" },
