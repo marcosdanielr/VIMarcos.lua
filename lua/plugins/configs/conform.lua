@@ -4,6 +4,7 @@ local config = function()
 	conform.setup({
 		formatters_by_ft = {
 			lua = { "stylua" },
+			go = { "goimports", "gofmt" },
 			svelte = { { "prettierd", "prettier" } },
 			javascript = { { "prettierd", "prettier" } },
 			typescript = { { "prettierd", "prettier" } },
