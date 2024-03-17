@@ -1,7 +1,8 @@
 local status, nvim_lsp = pcall(require, "lspconfig")
-if (not status) then return end
 
-local protocol = require('vim.lsp.protocol')
+if not status then
+  return
+end
 
 if format_on_save then
   vim.api.nvim_create_autocmd("BufWritePre", {
@@ -15,4 +16,22 @@ end
 nvim_lsp.tsserver.setup {
   filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
   cmd = { "typescript-language-server", "--stdio" }
+}
+
+nvim_lsp.lua_ls.setup {
+  capabilities = capabilities,
+  on_attach = on_attach,
+  settings = {
+    Lua = {
+      format = {
+        enable = true,
+        -- Put format options here
+        -- NOTE: the value should be STRING!!
+        defaultConfig = {
+          indent_style = "space",
+          indent_size = "2",
+        }
+      }
+    }
+  }
 }

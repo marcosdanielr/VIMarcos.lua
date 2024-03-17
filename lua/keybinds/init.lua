@@ -1,6 +1,6 @@
 require "keybinds.nvim-tree"
 require "keybinds.toggleterm"
-require "keybinds.telescope"
+ require "keybinds.telescope"
 require "keybinds.bufferline"
 
 -- shortcuts

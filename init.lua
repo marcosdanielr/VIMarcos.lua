@@ -1,4 +1,4 @@
-require "core.vim"
+ require "core.vim"
 require "constants.globals"
 require "core.lazy"
 require "plugins"
