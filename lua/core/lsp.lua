@@ -18,7 +18,6 @@ nvim_lsp.tsserver.setup({
 	cmd = { "typescript-language-server", "--stdio" },
 })
 
-
 nvim_lsp.lua_ls.setup({
 	settings = {
 		lua = {
@@ -43,5 +42,25 @@ nvim_lsp.gopls.setup({
 	filetypes = { "go", "gomod", "gowork", "gotmpl" },
 	settings = {
 		completeunimported = true,
+	},
+})
+
+nvim_lsp.rust_analyzer.setup({
+	settings = {
+		["rust-analyzer"] = {
+			cargo = {
+				allFeatures = true,
+			},
+			procMacro = {
+				enable = true,
+			},
+			diagnostics = {
+				enable = true,
+				disabled = { "unresolved-proc-macro" },
+			},
+			checkOnSave = {
+				command = "clippy",
+			},
+		},
 	},
 })
