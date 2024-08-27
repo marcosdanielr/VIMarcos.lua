@@ -1,0 +1,1 @@
+require("tabnine").setup({})
