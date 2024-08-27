@@ -65,10 +65,40 @@ local plugins = {
 		config = require("plugins.configs.nvim-lint"),
 	},
 
+	{
+		"nvim-treesitter/nvim-treesitter",
+		run = ":TSUpdate",
+		config = function()
+			require("nvim-treesitter.configs").setup({
+				highlight = {
+					enable = true,
+					additional_vim_regex_highlighting = false,
+				},
+				ensure_installed = { "javascript", "typescript", "tsx", "html", "css" },
+			})
+		end,
+	},
+
+	{
+		"windwp/nvim-ts-autotag",
+		after = "nvim-treesitter",
+		config = function()
+			require("nvim-ts-autotag").setup()
+		end,
+	},
+
+	{
+		"windwp/nvim-autopairs",
+		event = "InsertEnter",
+		config = function()
+			require("nvim-autopairs").setup({})
+		end,
+	},
+
 	-- Autocompletion
-	{ "hrsh7th/nvim-cmp" }, -- Required
+	{ "hrsh7th/nvim-cmp" },  -- Required
 	{ "hrsh7th/cmp-nvim-lsp" }, -- Required
-	{ "L3MON4D3/LuaSnip" }, -- Required
+	{ "L3MON4D3/LuaSnip" },  -- Required
 	{ "rafamadriz/friendly-snippets" },
 	{ "hrsh7th/cmp-buffer" },
 	{ "hrsh7th/cmp-path" },

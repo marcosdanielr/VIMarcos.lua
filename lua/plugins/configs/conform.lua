@@ -27,6 +27,7 @@ local config = function()
 			css = { { "prettierd", "prettier" } },
 			scss = { { "prettierd", "prettier" } },
 		},
+		stop_after_first = true,
 	})
 
 	vim.keymap.set({ "n", "v" }, "<leader>l", function()

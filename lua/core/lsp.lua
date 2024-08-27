@@ -5,7 +5,7 @@ if not status then
 end
 
 if format_on_save then
-	vim.api.nvim_create_autocmd("BufWritePre", {
+	vim.api.nvim_create_autocmd("bufwritepre", {
 		pattern = "*",
 		callback = function(args)
 			require("conform").format({ bufnr = args.buf })
@@ -18,14 +18,13 @@ nvim_lsp.tsserver.setup({
 	cmd = { "typescript-language-server", "--stdio" },
 })
 
+
 nvim_lsp.lua_ls.setup({
 	settings = {
-		Lua = {
+		lua = {
 			format = {
 				enable = true,
-				-- Put format options here
-				-- NOTE: the value should be STRING!!
-				defaultConfig = {
+				defaultconfig = {
 					indent_style = "space",
 					indent_size = "2",
 				},
@@ -43,6 +42,6 @@ nvim_lsp.gopls.setup({
 	cmd = { "gopls" },
 	filetypes = { "go", "gomod", "gowork", "gotmpl" },
 	settings = {
-		completeUnimported = true,
+		completeunimported = true,
 	},
 })
