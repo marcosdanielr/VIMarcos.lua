@@ -8,6 +8,17 @@ local plugins = {
 	{ "roobert/tailwindcss-colorizer-cmp.nvim" },
 	{ "norcalli/nvim-colorizer.lua" },
 	{
+		"luckasRanarison/tailwind-tools.nvim",
+		name = "tailwind-tools",
+		build = ":UpdateRemotePlugins",
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+			"nvim-telescope/telescope.nvim",
+			"neovim/nvim-lspconfig",
+		},
+		opts = {},
+	},
+	{
 		"akinsho/toggleterm.nvim",
 		version = "*",
 		config = true,
