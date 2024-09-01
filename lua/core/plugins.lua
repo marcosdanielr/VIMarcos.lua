@@ -54,6 +54,16 @@ local plugins = {
 	{
 		"stevearc/conform.nvim",
 		event = { "BufReadPre", "BufNewFile" },
+		opts = {
+			formatters_by_ft = {
+				python = { "ruff_format" },
+				vue = { "prettier" },
+			},
+			format_on_save = {
+				timeout_ms = 2500,
+				lsp_fallback = true,
+			},
+		},
 		config = require("plugins.configs.conform"),
 	},
 	{
@@ -70,11 +80,19 @@ local plugins = {
 		run = ":TSUpdate",
 		config = function()
 			require("nvim-treesitter.configs").setup({
+				auto_install = true,
+				ignore_install = { "astro" },
+				ensure_installed = { "javascript", "typescript", "tsx", "html", "css", "astro" },
 				highlight = {
 					enable = true,
-					additional_vim_regex_highlighting = false,
+					disable = { "astro" },
 				},
-				ensure_installed = { "javascript", "typescript", "tsx", "html", "css" },
+				textsubjects = {
+					enable = true,
+				},
+				indent = {
+					enable = true,
+				},
 			})
 		end,
 	},

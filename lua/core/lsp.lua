@@ -8,13 +8,20 @@ if format_on_save then
 	vim.api.nvim_create_autocmd("bufwritepre", {
 		pattern = "*",
 		callback = function(args)
-			require("conform").format({ bufnr = args.buf })
+			require("conform").format({ bufnr = args.buf, async = true, lsp_fallback = true })
 		end,
 	})
 end
 
 nvim_lsp.tsserver.setup({
-	filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
+	filetypes = {
+		"javascript",
+		"javascriptreact",
+		"javascript.jsx",
+		"typescript",
+		"typescriptreact",
+		"typescript.tsx",
+	},
 	cmd = { "typescript-language-server", "--stdio" },
 })
 
@@ -61,6 +68,14 @@ nvim_lsp.rust_analyzer.setup({
 			checkOnSave = {
 				command = "clippy",
 			},
+		},
+	},
+})
+
+require("lspconfig").astro.setup({
+	init_options = {
+		typescript = {
+			tsdk = "node_modules/typescript/lib",
 		},
 	},
 })

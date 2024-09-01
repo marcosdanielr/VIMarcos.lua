@@ -7,10 +7,11 @@ local config = function()
 			python = { "isort", "black" },
 			go = { "goimports", "gofmt" },
 			svelte = { { "prettierd", "prettier" } },
+			astro = { { "prettierd", "prettier" } },
 			javascript = { { "prettierd", "prettier" } },
-			typescript = { { "eslint_d", "eslint" } },
+			typescript = { { "prettierd", "prettier" } },
 			javascriptreact = { { "prettierd", "prettier" } },
-			typescriptreact = { { "eslint_d", "eslint" } },
+			typescriptreact = { { "prettierd", "prettier" } },
 			json = { { "prettierd", "prettier" } },
 			graphql = { { "prettierd", "prettier" } },
 			java = { "google-java-format" },
@@ -29,6 +30,10 @@ local config = function()
 		},
 		stop_after_first = true,
 	})
+
+	conform.formatters.prettier = {
+		prepend_args = { "--prose-wrap", "always" },
+	}
 
 	vim.keymap.set({ "n", "v" }, "<leader>l", function()
 		conform.format({
