@@ -1,5 +1,8 @@
 local status, nvim_lsp = pcall(require, "lspconfig")
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
+
 if not status then
 	return
 end
@@ -72,10 +75,24 @@ nvim_lsp.rust_analyzer.setup({
 	},
 })
 
-require("lspconfig").astro.setup({
+nvim_lsp.astro.setup({
 	init_options = {
 		typescript = {
 			tsdk = "node_modules/typescript/lib",
 		},
 	},
+})
+
+nvim_lsp.html.setup({
+	cmd = { "html-languageserver", "--stdio" },
+	filetypes = { "html" },
+	init_options = {
+		configurationSection = { "html", "css", "javascript" },
+		embeddedLanguages = { css = true, javascript = true },
+	},
+	settings = {},
+	single_file_support = true,
+	flags = { debounce_text_changes = 500 },
+	capabilities = capabilities,
+	-- on_attach = custom_attach,
 })
