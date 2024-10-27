@@ -11,7 +11,7 @@ if format_on_save then
 	vim.api.nvim_create_autocmd("bufwritepre", {
 		pattern = "*",
 		callback = function(args)
-			require("conform").format({ bufnr = args.buf, async = true, lsp_fallback = true })
+			require("conform").format({ bufnr = args.buf, async = false, lsp_fallback = true })
 		end,
 	})
 end
@@ -24,7 +24,9 @@ nvim_lsp.tsserver.setup({
 		"typescript",
 		"typescriptreact",
 		"typescript.tsx",
+		"vue",
 	},
+	flags = { debounce_text_changes = 100 },
 	cmd = { "typescript-language-server", "--stdio" },
 })
 
@@ -40,6 +42,7 @@ nvim_lsp.lua_ls.setup({
 			},
 		},
 	},
+	flags = { debounce_text_changes = 100 },
 })
 
 nvim_lsp.pyright.setup({
@@ -92,7 +95,7 @@ nvim_lsp.html.setup({
 	},
 	settings = {},
 	single_file_support = true,
-	flags = { debounce_text_changes = 500 },
+	flags = { debounce_text_changes = 100 },
 	capabilities = capabilities,
 	-- on_attach = custom_attach,
 })

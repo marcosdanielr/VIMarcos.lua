@@ -142,6 +142,8 @@ local plugins = {
 		cmd = { "LiveServerStart", "LiveServerStop" },
 		config = true,
 	},
+
+	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 }
 
 return plugins
