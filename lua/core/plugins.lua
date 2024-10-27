@@ -44,6 +44,11 @@ local plugins = {
 		lazy = false,
 	},
 	{
+		"JoosepAlviste/nvim-ts-context-commentstring",
+		lazy = false,
+		requires = { "nvim-treesitter" },
+	},
+	{
 		"akinsho/bufferline.nvim",
 		version = "*",
 		dependencies = "nvim-tree/nvim-web-devicons",
