@@ -98,7 +98,7 @@ local plugins = {
 			require("nvim-treesitter.configs").setup({
 				auto_install = true,
 				ignore_install = { "astro" },
-				ensure_installed = { "javascript", "typescript", "tsx", "html", "css", "astro" },
+				ensure_installed = { "javascript", "typescript", "tsx", "html", "css", "astro", "vue" },
 				highlight = {
 					enable = true,
 					disable = { "astro" },

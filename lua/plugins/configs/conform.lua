@@ -8,6 +8,7 @@ local config = function()
 			go = { "goimports", "gofmt" },
 			svelte = { { "prettierd", "prettier" } },
 			astro = { { "prettierd", "prettier" } },
+			vue = { { "prettierd", "prettier" } },
 			javascript = { { "prettierd", "prettier" } },
 			typescript = { { "prettierd", "prettier" } },
 			javascriptreact = { { "prettierd", "prettier" } },
@@ -27,6 +28,7 @@ local config = function()
 			toml = { "taplo" },
 			css = { { "prettierd", "prettier" } },
 			scss = { { "prettierd", "prettier" } },
+			php = { "php-cs-fixer" },
 		},
 		stop_after_first = true,
 	})

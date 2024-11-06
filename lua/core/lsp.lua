@@ -99,3 +99,5 @@ nvim_lsp.html.setup({
 	capabilities = capabilities,
 	-- on_attach = custom_attach,
 })
+
+nvim_lsp.phpactor.setup({})
