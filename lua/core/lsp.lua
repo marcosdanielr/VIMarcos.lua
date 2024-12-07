@@ -101,3 +101,14 @@ nvim_lsp.html.setup({
 })
 
 nvim_lsp.phpactor.setup({})
+
+nvim_lsp.dartls.setup({
+	cmd = { "dart", "language-server", "--protocol=lsp" },
+	filetypes = { "dart" },
+	root_dir = nvim_lsp.util.root_pattern("pubspec.yaml"),
+	init_options = {
+		onlyAnalyzeProjectsWithOpenFiles = true,
+		suggestFromUnimportedLibraries = true,
+	},
+	capabilities = capabilities,
+})

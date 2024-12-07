@@ -149,6 +149,16 @@ local plugins = {
 	},
 
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+
+	{
+		"nvim-flutter/flutter-tools.nvim",
+		lazy = false,
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"stevearc/dressing.nvim",
+		},
+		config = true,
+	},
 }
 
 return plugins

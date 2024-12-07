@@ -29,6 +29,7 @@ local config = function()
 			css = { { "prettierd", "prettier" } },
 			scss = { { "prettierd", "prettier" } },
 			php = { "php-cs-fixer" },
+			dart = { "dart_format" },
 		},
 		stop_after_first = true,
 	})
