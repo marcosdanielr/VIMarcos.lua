@@ -1,6 +1,7 @@
 -- plugins.lazy need be the first
 require("plugins.lazy")
 
+require("plugins.luasnip")
 require("plugins.bufferline")
 require("plugins.colorizer")
 require("plugins.comment")
