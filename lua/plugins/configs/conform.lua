@@ -38,13 +38,14 @@ local config = function()
 		prepend_args = { "--prose-wrap", "always" },
 	}
 
-	vim.keymap.set({ "n", "v" }, "<leader>l", function()
-		conform.format({
-			lsp_fallback = true,
-			async = false,
-			timeout_ms = 1000,
+	if format_on_save then
+		vim.api.nvim_create_autocmd("bufwritepre", {
+			pattern = "*",
+			callback = function(args)
+				conform.format({ bufnr = args.buf, async = false, lsp_fallback = false })
+			end,
 		})
-	end, { desc = "Format file or range (in visual mode)" })
+	end
 end
 
 return config

@@ -7,15 +7,6 @@ if not status then
 	return
 end
 
-if format_on_save then
-	vim.api.nvim_create_autocmd("bufwritepre", {
-		pattern = "*",
-		callback = function(args)
-			require("conform").format({ bufnr = args.buf, async = false, lsp_fallback = true })
-		end,
-	})
-end
-
 nvim_lsp.tsserver.setup({
 	filetypes = {
 		"javascript",
