@@ -2,6 +2,7 @@ local g = vim.g
 local opt = vim.opt
 local cmd = vim.cmd
 
+
 opt.termguicolors = true
 g.mapleader = ' '
 
@@ -32,3 +33,5 @@ opt.tabstop = 2
 opt.smartindent = true
 opt.list = true
 opt.shortmess:append { c = true }
+
+opt.wrap = true

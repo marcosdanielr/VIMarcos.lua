@@ -91,7 +91,6 @@ nvim_lsp.html.setup({
 	-- on_attach = custom_attach,
 })
 
-nvim_lsp.phpactor.setup({})
 
 nvim_lsp.dartls.setup({
 	cmd = { "dart", "language-server", "--protocol=lsp" },
@@ -102,4 +101,24 @@ nvim_lsp.dartls.setup({
 		suggestFromUnimportedLibraries = true,
 	},
 	capabilities = capabilities,
+})
+
+
+nvim_lsp.phpactor.setup({
+  cmd = { "phpactor", "language-server" },
+  filetypes = { "php" },
+  root_dir = nvim_lsp.util.root_pattern("composer.json", ".git"),
+  settings = {
+    phpactor = {
+      completion = {
+        enable = true,
+        timeout = 2000,
+      },
+      language_server = {
+        enable = true,
+      },
+    },
+  },
+  capabilities = capabilities,
+  flags = { debounce_text_changes = 100 },
 })

@@ -28,7 +28,7 @@ local config = function()
 			toml = { "taplo" },
 			css = { { "prettierd", "prettier" } },
 			scss = { { "prettierd", "prettier" } },
-			php = { "php-cs-fixer" },
+			php = { { "pint", "php_cs_fixer" } },
 			dart = { "dart_format" },
 		},
 		stop_after_first = true,
