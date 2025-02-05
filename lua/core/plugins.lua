@@ -158,6 +158,20 @@ local plugins = {
 			"stevearc/dressing.nvim",
 		},
 	},
+	{
+		"jay-babu/mason-nvim-dap.nvim",
+	},
+	{
+		"mfussenegger/nvim-dap",
+		dependencies = {
+			"leoluz/nvim-dap-go",
+			"rcarriga/nvim-dap-ui",
+			"theHamsta/nvim-dap-virtual-text",
+			"nvim-neotest/nvim-nio",
+			"williamboman/mason.nvim",
+		},
+		config = require("plugins.configs.dap"),
+	},
 }
 
 return plugins
