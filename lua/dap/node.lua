@@ -27,15 +27,15 @@ dap.configurations.javascript = {
 
 dap.configurations.typescript = {
 	{
-		name = "Debug Nest (ts-node)",
+		name = "Debug ts-node",
 		type = "node2",
 		request = "launch",
 		runtimeExecutable = "node",
 		runtimeArgs = {
 			"-r",
-			"ts-node/register", -- registra ts-node para rodar TS
+			"ts-node/register",
 			"-r",
-			"tsconfig-paths/register", -- opcional, se usa paths do tsconfig.json
+			"tsconfig-paths/register",
 		},
 		args = { "${workspaceFolder}/src/main.ts" },
 		cwd = "${workspaceFolder}",
