@@ -1,0 +1,6 @@
+require("core.keybinds.nvim-tree")
+require("core.keybinds.toggleterm")
+require("core.keybinds.telescope")
+require("core.keybinds.bufferline")
+require("core.keybinds.dap")
+require("core.keybinds.vim")
