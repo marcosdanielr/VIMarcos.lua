@@ -30,8 +30,16 @@ local config = function()
 		end,
 	})
 
-	require("dap.php")
-	require("dap.node")
+	local dap_languages = {
+		"php",
+		"node",
+		"lldb",
+		"rust",
+	}
+
+	for _, language in ipairs(dap_languages) do
+		require("dap." .. language)
+	end
 
 	dap.listeners.before.attach.dapui_config = function()
 		ui.open()
