@@ -48,3 +48,5 @@ end)
 vim.keymap.set("n", "<C-0>", function()
 	vim.g.neovide_scale_factor = 1.0
 end)
+
+set_key("n", "E", ":lua vim.diagnostic.open_float()<CR>", ns)
